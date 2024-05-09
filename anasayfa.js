@@ -75,3 +75,44 @@ resimKonteyner.addEventListener('mousemove', function(e) {
   const walk = (x - startX) * 3; // Hızı ayarlamak için bir faktör
   resimKonteyner.scrollLeft = scrollLeft - walk;
 });
+
+// Resme tıklandığında büyük resmi gösterme fonksiyonu
+function buyukResmiGoster(resimURL) {
+  // Büyük resmin container'ını oluştur
+  const modalContainer = document.createElement('div');
+  modalContainer.classList.add('modal-container');
+
+  // Büyük resmi oluştur
+  const modalImage = document.createElement('img');
+  modalImage.src = resimURL;
+  modalImage.alt = "Büyük Resim";
+  modalImage.classList.add('modal-image');
+
+  // Resmin kapatma düğmesini oluştur
+  const closeButton = document.createElement('span');
+  closeButton.innerHTML = '&times;';
+  closeButton.classList.add('close-button');
+  closeButton.addEventListener('click', function() {
+    modalContainer.remove();
+  });
+
+  // Büyük resmi container'a ekle
+  modalContainer.appendChild(modalImage);
+  modalContainer.appendChild(closeButton);
+
+  // Büyük resmi sayfaya ekle
+  document.body.appendChild(modalContainer);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Resimleri seç
+  const images = document.querySelectorAll('.miras-images img');
+
+  // Her resme tıklama olayı ekle
+  images.forEach(function(image) {
+    image.addEventListener('click', function() {
+      // Büyük resmi göster
+      buyukResmiGoster(this.src);
+    });
+  });
+});
