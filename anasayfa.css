@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#menu {
+  background-color: #8B4513; /* Kahverengi tonu */
+}
+
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu ul li {
+  display: inline-block;
+}
+
+#menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: #fff; /* Beyaz metin */
+  text-decoration: none;
+}
+
+#menu ul li a:hover {
+  background-color: #A0522D; /* Hover durumunda tonu biraz daha açık */
+}
+
+#menu ul li a.active {
+  background-color: #fff; /* Seçili öğenin arka plan rengi */
+  color: #8B4513; /* Seçili öğenin metin rengi */
+}
+
+.icerik {
+  padding: 20px;
+}
+
+.slider {
+  overflow-x: hidden; /* Yatay kaydırma çubuğunu kaldır */
+  white-space: nowrap; /* Resimlerin yatay olarak sığması */
+}
+
+.slider img {
+  width: auto; /* Resimlerin orijinal boyutunda kalmasını sağlar */
+  height: 200px; /* Sabit bir yükseklik */
+  margin-right: 10px; /* Resimler arasında boşluk bırakır */
+}
+
+.bilgiler h3 {
+  color: red; /* Başlık metin rengi */
+}
