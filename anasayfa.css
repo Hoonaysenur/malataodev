@@ -1,15 +1,16 @@
 body {
+  background-image: url("arkaplan-resmi.jpg");
+  background-size: cover;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
 }
-
 .container {
   width: 80%;
   margin: 0 auto;
 }
 
 #menu {
-  background-color: #8B4513; /* Kahverengi tonu */
+  background-color: #154453;
 }
 
 #menu ul {
@@ -25,17 +26,17 @@ body {
 #menu ul li a {
   display: block;
   padding: 10px 20px;
-  color: #fff; /* Beyaz metin */
+  color: #f5ecec; 
   text-decoration: none;
 }
 
 #menu ul li a:hover {
-  background-color: #A0522D; /* Hover durumunda tonu biraz daha açık */
+  background-color: #000000;
 }
 
 #menu ul li a.active {
-  background-color: #fff; /* Seçili öğenin arka plan rengi */
-  color: #8B4513; /* Seçili öğenin metin rengi */
+  background-color: #fff;
+  color: #3e2349;
 }
 
 .icerik {
@@ -43,16 +44,16 @@ body {
 }
 
 .slider {
-  overflow-x: hidden; /* Yatay kaydırma çubuğunu kaldır */
-  white-space: nowrap; /* Resimlerin yatay olarak sığması */
+  overflow-x: hidden; 
+  white-space: nowrap;
 }
 
 .slider img {
-  width: auto; /* Resimlerin orijinal boyutunda kalmasını sağlar */
-  height: 200px; /* Sabit bir yükseklik */
-  margin-right: 10px; /* Resimler arasında boşluk bırakır */
+  width: auto;
+  height: 200px;
+  margin-right: 10px;
 }
 
 .bilgiler h3 {
-  color: red; /* Başlık metin rengi */
+  color: red;
 }
