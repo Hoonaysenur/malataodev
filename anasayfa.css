@@ -1,18 +1,58 @@
+h2 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+li {
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  color: #000;
+  font-weight: bold;
+  font-size: 15px;
+}
+p {
+  color: #5decf1;
+  font-weight: bold;
+  font-size: 15px;
+}
+li {
+  color: #5decf1;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 body {
   background-image: url("arkaplan-resmi.jpg");
+  background-position: center;
   background-size: cover;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-attachment: fixed;
+  height: 100vh;
 }
 .container {
+  max-width: 1170px;
   width: 80%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
-#menu {
-  background-color: #154453;
+.header-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
 }
-
+.header-logo{
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-bottom: 5px solid #000;
+  border-radius: 35px;
+}
 #menu ul {
   list-style-type: none;
   margin: 0;
@@ -26,17 +66,17 @@ body {
 #menu ul li a {
   display: block;
   padding: 10px 20px;
-  color: #f5ecec; 
+  color: #070707; 
   text-decoration: none;
 }
 
 #menu ul li a:hover {
-  background-color: #000000;
+  background-color: #da6517;
 }
 
 #menu ul li a.active {
-  background-color: #fff;
-  color: #3e2349;
+  background-color: #095713;
+  color: #0c0a0c;
 }
 
 .icerik {
