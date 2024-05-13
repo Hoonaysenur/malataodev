@@ -5,17 +5,95 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>İletişim</title>
 <link rel="stylesheet" href="anasayfa.css">
+<style>
+  /* Stilleri buraya ekle */
+  .header-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+  }
+
+  .header-logo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #000;
+    border-radius: 35px;
+    margin-right: auto; /* Malatya yazısını sola yasla */
+  }
+
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right; /* Menüyü sağa hizala */
+  }
+
+  #menu ul li {
+    display: inline-block;
+  }
+
+  #menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+  }
+
+  #menu ul li a:hover {
+    background-color: #da6517;
+  }
+
+  #menu ul li a.active {
+    background-color: #095713;
+    color: #0c0a0c;
+  }
+
+  .container {
+    max-width: 1170px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .icerik {
+    padding: 20px;
+  }
+
+  .bilgiler {
+    margin-left: auto; /* Malatya yazısını sağa yasla */
+    font-family: Arial, sans-serif; /* Yazı tipini ayarla */
+  }
+
+  .bilgiler ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .bilgiler ul li {
+    margin-bottom: 10px;
+  }
+
+  .bilgiler ul li:last-child {
+    margin-bottom: 0;
+  }
+</style>
 </head>
 <body>
 <div class="container">
-  <div id="menu">
-    <ul>
-      <li><a href="anasayfa.html" id="hakkimizda">Hakkımızda</a></li>
-      <li><a href="#" id="iletisim" class="active">İletişim</a></li>
-      <li><a href="sehrim.html" id ="sehrim">Şehrim</a></li>
-      <li><a href="ozgecmisim.html" id="ozgecmisim">Özgeçmiş</a></li>
-      <li><a href="mirasim.html" id="mirasim">Mirasımız</a></li>
-    </ul>
+  <div class="header-navbar">
+    <div class="header-logo">
+      <h2>MALATYA</h2>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="anasayfa.html" id="hakkimizda">Hakkımızda</a></li>
+        <li><a href="#" id="iletisim" class="active">İletişim</a></li>
+        <li><a href="sehrim.html" id="sehrim">Şehrim</a></li>
+        <li><a href="ozgecmisim.html" id="ozgecmisim">Özgeçmiş</a></li>
+        <li><a href="mirasim.html" id="mirasim">Mirasımız</a></li>
+      </ul>
+    </div>
   </div>
   <div class="icerik">
     <div class="bilgiler">
@@ -23,7 +101,8 @@
         <li>E-posta: aysenur.korkut1@ogr.sakarya.edu.tr</li>
         <li>Telefon: 534 565 47 11</li>
       </ul>
-   
+    </div>
+  </div>
 </div>
 
 <script>
@@ -31,8 +110,7 @@ function hakkimizdaSayfasinaYonlendir() {
   window.location.href = "anasayfa.html"; 
 }
 
-
-document.getElementById('hakkimizdaLink').addEventListener('click', function(event) {
+document.getElementById('hakkimizda').addEventListener('click', function(event) {
   event.preventDefault(); 
   hakkimizdaSayfasinaYonlendir(); 
 });

@@ -5,7 +5,60 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mirasımız</title>
 <link rel="stylesheet" href="anasayfa.css">
+
 <style>
+  .header-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Menü ile içerik arasındaki boşluğu ayarla */
+  }
+
+  .header-logo {
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 5px solid #000;
+    border-radius: 35px;
+    margin-right: auto; /* Malatya yazısını sola yasla */
+  }
+
+  #menu {
+    float: right;
+  }
+
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu ul li {
+    display: inline-block;
+  }
+
+  #menu ul li:first-child {
+    margin-left: 0; /* İlk menü öğesinin sola boşluk olmaması için */
+  }
+
+  #menu ul li a {
+    text-decoration: none;
+    color: #000; /* istediğiniz renk */
+    font-weight: bold;
+  }
+
+  #menu ul li a:hover {
+    color: black; /* istediğiniz hover rengi */
+  }
+
+  #menu ul li a.active {
+    color: #000000; /* istediğiniz aktif sayfa rengi */
+  }
+
+  /* Başlık rengi */
+  h3 {
+    color: red;
+  }
+
   /* Stilleri buraya ekle */
   /* Örnek olarak */
   .miras-container {
@@ -57,23 +110,23 @@
     font-size: 30px;
     cursor: pointer;
   }
-
-  /* Başlık rengi */
-  h3 {
-    color: red;
-  }
 </style>
 </head>
 <body>
 <div class="container">
-  <div id="menu">
-    <ul>
-      <li><a href="anasayfa.html" id="hakkimizda">Hakkımızda</a></li>
-      <li><a href="iletisim.html" id="iletisim">İletişim</a></li>
-      <li><a href="sehrim.html" id="sehrim">Şehrim</a></li>
-      <li><a href="ozgecmisim.html" id="ozgecmisim">Özgeçmiş</a></li>
-      <li><a href="mirasim.html" id="mirasim" class="active">Mirasımız</a></li> <!-- Değişiklik burada -->
-    </ul>
+  <div class="header-navbar">
+    <div class="header-logo">
+      <h2>MALATYA</h2>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="anasayfa.html" id="hakkimizda">Hakkımızda</a></li>
+        <li><a href="iletisim.html" id="iletisim">İletişim</a></li>
+        <li><a href="sehrim.html" id="sehrim">Şehrim</a></li>
+        <li><a href="ozgecmisim.html" id="ozgecmisim">Özgeçmiş</a></li>
+        <li><a href="mirasim.html" id="mirasim" class="active">Mirasımız</a></li> <!-- Değişiklik burada -->
+      </ul>
+    </div>
   </div>
   <div class="icerik">
     <div class="miras-container">

@@ -17,14 +17,19 @@ a {
   font-size: 15px;
 }
 p {
-  color: #5decf1;
+  color: #080808;
   font-weight: bold;
   font-size: 15px;
 }
 li {
-  color: #5decf1;
+  color: #080a0a;
   font-weight: bold;
   font-size: 15px;
+}
+
+.text-background {
+  background-color: rgba(255, 255, 255, 0.5); /* Beyaz ve %50 şeffaflıkta arka plan */
+  padding: 10px; /* İçerik ile etiket arasında boşluk bırakmak için */
 }
 
 body {
@@ -45,13 +50,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 20px 0;
+  margin-right: 100px;
 }
 .header-logo{
+  float: left;
   font-size: 16px;
   letter-spacing: 2px;
   border-bottom: 5px solid #000;
   border-radius: 35px;
+  margin-left: 40px;
 }
 #menu ul {
   list-style-type: none;
@@ -95,5 +103,5 @@ body {
 }
 
 .bilgiler h3 {
-  color: red;
+  color: rgb(184, 5, 5);
 }

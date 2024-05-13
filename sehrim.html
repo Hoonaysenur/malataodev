@@ -5,17 +5,86 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Şehrim</title>
 <link rel="stylesheet" href="anasayfa.css">
+
+<style>
+  .header-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo{
+  float: left;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-bottom: 5px solid #000;
+  border-radius: 35px;
+  margin-left: 40px;
+}
+
+  #menu {
+    float: right;
+  }
+
+  #menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #menu ul li {
+    display: inline-block;
+  }
+
+  #menu ul li:first-child {
+    margin-left: 0; /* İlk menü öğesinin sola boşluk olmaması için */
+  }
+
+  #menu ul li a {
+    text-decoration: none;
+    color: #000; /* istediğiniz renk */
+    font-weight: bold;
+  }
+
+  #menu ul li a:hover {
+    color: black; /* istediğiniz hover rengi */
+  }
+
+  #menu ul li a.active {
+    color: #000000; /* istediğiniz aktif sayfa rengi */
+  }
+
+  /* Şehrim sayfası için özel stiller */
+  .icerik {
+    padding-top: 60px; /* Menü yüksekliği kadar boşluk bırak */
+  }
+
+  /* Şehrim yazısı için özel stiller */
+  #sehrimMenu {
+    display: none; /* Şehrim yazısını varsayılan olarak gizle */
+  }
+
+  #sehrimMenu a.active {
+    display: inline-block; /* Aktif sayfada Şehrim yazısını göster */
+  }
+</style>
+
 </head>
 <body>
 <div class="container">
-  <div id="menu">
-    <ul>
-      <li><a href="index.html" id="hakkimizda">Hakkımızda</a></li>
-      <li><a href="iletisim.html" id="iletisim">İletişim</a></li>
-      <li><a href="#" id="sehrim" class="active">Şehrim</a></li>
-      <li><a href="ozgecmisim.html" id="ozgecmisim">Özgeçmiş</a></li>
-      <li><a href="mirasim.html" id="mirasim">Mirasımız</a></li>
-    </ul>
+  <div class="header-navbar">
+    <div class="header-logo">
+      <h2>MALATYA</h2>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="anasayfa.html" id="hakkimizda">Hakkımızda</a></li>
+        <li><a href="iletisim.html" id="iletisim">İletişim</a></li>
+        <li ><a href="#" id="sehrim" class="active">Şehrim</a></li>
+        <li><a href="ozgecmisim.html" id="ozgecmisim">Özgeçmiş</a></li>
+        <li><a href="mirasim.html" id="mirasim">Mirasımız</a></li>
+      </ul>
+    </div>
   </div>
   <div class="icerik">
     <div class="slider" id="resimKonteyner"> <!-- Resim konteyneri -->
@@ -29,7 +98,7 @@
     <div class="bilgiler">
       <h3>Genel Bilgi</h3>
       <p style="text-align: justify;">
-        Medeniyetlerin doğduğu Avrasya'yı bir uçtan öteki uca kat edip Avrupa'nın batısı ile Asya'nın doğusunu birleştiren ve medeniyetlerin yayılma yolunu ifade eden eksen Anadolu'dan geçmektedir. Avrasya'nın bu uzun doğu batı ekseni boyunca toplumlar arası hareketlilik yoğun olarak hep olmuş, bu hareketlilik toplumsal rekabet, savaş ve göçlere sebep olmanın yanında aynı zamanda da toplumsal ve teknik yeniliklerin bu eksen boyunca yayılmasını sağlamıştır. İşte adeta medeniyetleri taşıyan bu eksen Anadolu'dan geçerken yoğunlaşarak (ve daralarak) Anadolu'yu medeniyetler köprüsü haline getirmektedir. Bu özellik Anadolu'nun her taşı tarih kokan bir yeryüzü cennetidir.
+        Medeniyetlerin doğduğu Avrasya'yı bir uçtan öteki uca kat edip Avrupa'nın batısı ile Asya'nın doğusunu birleştiren ve medeniyetlerin yayılma yolunu ifade eden eksen Anadolu'dan geçmektedir. Avrasya'nın bu uzun doğu batı ekseni boyunca toplumlar arası hareketlilik yoğun olarak hep olmuş, bu hareketlilik toplumsal rekabet, savaş ve göçlere sebep olmanın yanında aynı zamanda da toplumsal ve teknik yeniliklerin bu eksen boyunca yayılmasını sağlamıştır. İşte adeta medeniyetleri taşıyan bu eksen Anadolu'dan geçerken yoğunlaşarak (ve daralarak) Anadolu'nun medeniyetler köprüsü haline getirmektedir. Bu özellik Anadolu'nun her taşı tarih kokan bir yeryüzü cennetidir.
       </p>
       <p style="text-align: justify;">
         Tarihte olduğu gibi günümüzde de medeniyetleri buluşturan Yurdumuzun önemli kavşak noktalarından birinde de Malatya bulunmaktadır. Bu özelliği Malatya'yı tarihin her döneminde önemli kılmış ve dikkatleri hep üzerine çekmiştir.
