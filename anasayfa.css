@@ -28,8 +28,8 @@ li {
 }
 
 .text-background {
-  background-color: rgba(255, 255, 255, 0.5); /* Beyaz ve %50 şeffaflıkta arka plan */
-  padding: 10px; /* İçerik ile etiket arasında boşluk bırakmak için */
+  background-color: rgba(255, 255, 255, 0.5); 
+  padding: 10px; 
 }
 
 body {
@@ -106,3 +106,4 @@ body {
 .bilgiler h3 {
   color: rgb(184, 5, 5);
 }
+
