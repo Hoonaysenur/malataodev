@@ -75,6 +75,52 @@ resimKonteyner.addEventListener('mousemove', function(e) {
   resimKonteyner.scrollLeft = scrollLeft - walk;
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const basliklar = document.querySelectorAll('.miras-text h3');
+  const menu = document.getElementById('miras-menu');
+
+  basliklar.forEach(function(baslik, index) {
+      const baslikId = 'baslik-' + index;
+      const baslikAdi = baslik.textContent;
+
+      const menuBaglanti = document.createElement('a');
+      menuBaglanti.href = '#' + baslikId;
+      menuBaglanti.textContent = baslikAdi;
+      menu.appendChild(menuBaglanti);
+
+      baslik.id = baslikId;
+
+      menuBaglanti.addEventListener('click', function(event) {
+          event.preventDefault();
+          const hedefId = this.getAttribute('href').substring(1); // Bağlantının hedefini al, "#" işaretini kaldır
+          const hedef = document.getElementById(hedefId); // Hedef elementi bul
+          hedef.scrollIntoView({ behavior: 'smooth' }); // Hedefe kaydır
+
+          // Bağlantıya tıklandığında ilgili sayfaya yönlendirme
+          window.location.href = this.getAttribute('href');
+      });
+  });
+
+  const menuBaglantilar = document.querySelectorAll('#miras-menu a');
+  menuBaglantilar.forEach(function(baglanti) {
+      baglanti.addEventListener('click', function(event) {
+          event.preventDefault();
+          const hedefId = this.getAttribute('href').substring(1); // Bağlantının hedefini al, "#" işaretini kaldır
+          const hedef = document.getElementById(hedefId); // Hedef elementi bul
+          hedef.scrollIntoView({ behavior: 'smooth' }); // Hedefe kaydır
+
+          // Bağlantıya tıklandığında ilgili sayfaya yönlendirme
+          window.location.href = this.getAttribute('href');
+      });
+  });
+});
+
+
+
+
+
+
+
 
 function buyukResmiGoster(resimURL) {
   
