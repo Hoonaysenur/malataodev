@@ -11,6 +11,11 @@ p {
 li {
   font-family: 'Open Sans', sans-serif;
 }
+h2 {
+  color: #044d10;
+  font-weight: bold;
+  font-size: 25px;
+}
 a {
   color: #000;
   font-weight: bold;
@@ -57,7 +62,7 @@ body {
   float: left;
   font-size: 16px;
   letter-spacing: 2px;
-  border-bottom: 5px solid #000;
+  border-bottom: 5px solid #b83f0f;
   border-radius: 35px;
   margin-left: 40px;
 }
@@ -105,5 +110,28 @@ body {
 
 .bilgiler h3 {
   color: rgb(184, 5, 5);
+}
+#miras-menu {
+  display: none; /* Başlangıçta menüyü gizle */
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#miras-menu a {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+
+#miras-menu a:hover {
+  color: red;
+}
+
+#mirasim:hover #miras-menu {
+  display: block; /* Mirasım yazısının üzerine gelindiğinde menüyü göster */
 }
 
