@@ -92,11 +92,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
       menuBaglanti.addEventListener('click', function(event) {
           event.preventDefault();
-          const hedefId = this.getAttribute('href').substring(1); // Bağlantının hedefini al, "#" işaretini kaldır
-          const hedef = document.getElementById(hedefId); // Hedef elementi bul
-          hedef.scrollIntoView({ behavior: 'smooth' }); // Hedefe kaydır
+          const hedefId = this.getAttribute('href').substring(1); 
+          const hedef = document.getElementById(hedefId); 
+          hedef.scrollIntoView({ behavior: 'smooth' }); 
 
-          // Bağlantıya tıklandığında ilgili sayfaya yönlendirme
+          
           window.location.href = this.getAttribute('href');
       });
   });
@@ -105,19 +105,15 @@ document.addEventListener("DOMContentLoaded", function() {
   menuBaglantilar.forEach(function(baglanti) {
       baglanti.addEventListener('click', function(event) {
           event.preventDefault();
-          const hedefId = this.getAttribute('href').substring(1); // Bağlantının hedefini al, "#" işaretini kaldır
-          const hedef = document.getElementById(hedefId); // Hedef elementi bul
-          hedef.scrollIntoView({ behavior: 'smooth' }); // Hedefe kaydır
+          const hedefId = this.getAttribute('href').substring(1); 
+          const hedef = document.getElementById(hedefId); 
+          hedef.scrollIntoView({ behavior: 'smooth' }); 
 
-          // Bağlantıya tıklandığında ilgili sayfaya yönlendirme
+          
           window.location.href = this.getAttribute('href');
       });
   });
 });
-
-
-
-
 
 
 

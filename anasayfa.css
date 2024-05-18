@@ -12,7 +12,7 @@ li {
   font-family: 'Open Sans', sans-serif;
 }
 h2 {
-  color: #044d10;
+  color: #09811d;
   font-weight: bold;
   font-size: 25px;
 }
@@ -112,7 +112,7 @@ body {
   color: rgb(184, 5, 5);
 }
 #miras-menu {
-  display: none; /* Başlangıçta menüyü gizle */
+  display: none; 
   position: absolute;
   background-color: white;
   border: 1px solid black;
@@ -132,6 +132,6 @@ body {
 }
 
 #mirasim:hover #miras-menu {
-  display: block; /* Mirasım yazısının üzerine gelindiğinde menüyü göster */
+  display: block; 
 }
 
