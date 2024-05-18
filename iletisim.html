@@ -79,7 +79,32 @@
   }
 </style>
 </head>
+
+
+<style>
+  
+  #weather-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ca7615;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  #weather-info {
+    font-size: 16px;
+    font-weight: bold;
+  }
+</style>
+<div id="weather-widget">
+  <div id="weather-info"></div>
+</div>
+
 <body>
+  
 <div class="container">
   <div class="header-navbar">
     <div class="header-logo">
@@ -115,5 +140,30 @@ document.getElementById('hakkimizda').addEventListener('click', function(event) 
   hakkimizdaSayfasinaYonlendir(); 
 });
 </script>
+
+<script>
+  
+  const apiKey = '6e2c03698e61faaba0465535fcc95bb3';
+
+  
+  function getWeather() {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=Malatya&appid=${apiKey}&units=metric`)
+      .then(response => response.json())
+      .then(data => {
+        const weatherWidget = document.getElementById('weather-info');
+        const temperature = Math.round(data.main.temp);
+        weatherWidget.innerHTML = `Malatya: ${temperature}°C`;
+      })
+      .catch(error => {
+        console.error('Hava durumu verisi alınamadı:', error);
+        const weatherWidget = document.getElementById('weather-info');
+        weatherWidget.innerHTML = 'Hava durumu verisi alınamadı';
+      });
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", getWeather);
+</script>
+
 </body>
 </html>
