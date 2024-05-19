@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>İletişim</title>
 <link rel="stylesheet" href="anasayfa.css">
+<script src="https://kit.fontawesome.com/d5b5e71fcf.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
 <style>
   
   .header-navbar {
@@ -78,8 +82,6 @@
     margin-bottom: 0;
   }
 </style>
-</head>
-
 
 <style>
   
@@ -103,7 +105,7 @@
   <div id="weather-info"></div>
 </div>
 
-<body>
+</style>
   
 <div class="container">
   <div class="header-navbar">
@@ -122,11 +124,29 @@
   </div>
   <div class="icerik">
     <div class="bilgiler">
-      <ul>
-        <li> E-posta: aysenur.korkut1@ogr.sakarya.edu.tr</li>
-        <li>Telefon: 534 565 47 11</li>
-      </ul>
-    </div>
+    <form action="iletisim.php" method="POST" name="form" onsubmit="return formDenetle()">
+      <label for="ad">Adınız:</label>
+      <input type="text" id="ad" name="ad" required><br><br>
+      <label for="soyad">Soyadınız:</label>
+      <input type="text" id="soyad" name="soyad" required><br><br>
+      <label for="email">E-posta:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="cinsiyet">Cinsiyet:</label>
+      <input type="radio" id="bay" name="cinsiyet" value="Bay" required>
+      <label for="bay">Bay</label>
+      <input type="radio" id="bayan" name="cinsiyet" value="Bayan" required>
+      <label for="bayan">Bayan</label><br><br>
+      <label for="konu">Konu:</label>
+      <select id="konu" name="konu" required>
+        <option value="Genel">Genel</option>
+        <option value="Yazılım">Yazılım</option>
+        <option value="Web">Web</option>
+      </select><br><br>
+      <label for="mesaj">Mesajınız:</label><br>
+      <textarea id="mesaj" name="mesaj" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="Gönder">
+      <input type="reset" value="Temizle">
+    </form>
   </div>
 </div>
 
