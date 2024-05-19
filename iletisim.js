@@ -1,5 +1,3 @@
-// iletisim.js
-
 function formDenetle() {
     var ad = document.getElementById('ad').value;
     var soyad = document.getElementById('soyad').value;
